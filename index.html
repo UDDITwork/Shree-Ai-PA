@@ -78,7 +78,7 @@
             color: white;
         }
 
-        /* Features Section */
+        /* Content Section */
         .content-section {
             padding: 60px 20px;
             text-align: center;
@@ -87,24 +87,37 @@
             margin-top: 100px;
         }
 
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 40px;
-            margin-top: 40px;
-            animation: fadeInUp 2s ease-out;
+        .card-container {
+            display: flex;
+            justify-content: center;
+            margin: 40px 0;
+            flex-wrap: wrap;
+            gap: 30px;
         }
 
-        .feature {
+        .card {
             background-color: #222;
-            padding: 25px;
+            padding: 20px;
+            width: 300px;
             border-radius: 15px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
             transition: transform 0.3s ease, background-color 0.3s ease;
         }
-        .feature:hover {
+
+        .card:hover {
             transform: scale(1.05);
             background-color: #333;
+        }
+
+        .card h3 {
+            color: #ff3366;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 16px;
+            color: #bbb;
         }
 
         /* Download Button */
@@ -175,108 +188,7 @@
                 opacity: 1;
             }
         }
-  /* Global Styles */
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #0d0d0d;
-            color: white;
-            height: 100vh;
-            overflow-x: hidden;
-            scroll-behavior: smooth;
-        }
 
-        /* Header Section */
-        header {
-            padding: 80px 20px;
-            text-align: center;
-            background: linear-gradient(45deg, rgba(0,0,0,0.7), rgba(255, 51, 102, 0.5));
-            position: relative;
-            z-index: 10;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-        header h1 {
-            font-size: 60px;
-            letter-spacing: 3px;
-            animation: fadeIn 3s ease-out;
-        }
-        header p {
-            font-size: 22px;
-            color: #ddd;
-            margin-top: 20px;
-            animation: fadeIn 4s ease-out;
-        }
-
-        /* Cards Styling */
-        .card-container {
-            display: flex;
-            justify-content: center;
-            margin: 40px 0;
-            flex-wrap: wrap;
-            gap: 30px;
-        }
-
-        .card {
-            background-color: #222;
-            padding: 20px;
-            width: 300px;
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s ease, background-color 0.3s ease;
-        }
-
-        .card:hover {
-            transform: scale(1.05);
-            background-color: #333;
-        }
-
-        .card h3 {
-            color: #ff3366;
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        .card p {
-            font-size: 16px;
-            color: #bbb;
-        }
-
-        /* Animations */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        /* Footer Section */
-        footer {
-            background-color: #111;
-            color: #bbb;
-            padding: 40px;
-            text-align: center;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-            border-top: 1px solid #444;
-        }
-
-        footer a {
-            color: #ff3366;
-            text-decoration: none;
-            transition: text-decoration 0.3s ease;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
         /* WebGL & Canvas Background Effects */
         #canvas {
             width: 100%;
@@ -296,37 +208,6 @@
             background: radial-gradient(circle, rgba(255, 51, 102, 0.2), rgba(0, 0, 0, 0.5));
             z-index: -1;
         }
-
-        /* Mobile Responsiveness */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 40px;
-            }
-            
-            header p {
-                font-size: 18px;
-            }
-
-            nav {
-                flex-direction: column;
-                align-items: center;
-                padding: 5px;
-            }
-
-            nav a {
-                margin: 5px 0;
-                font-size: 16px;
-            }
-
-            .feature {
-                margin: 10px;
-            }
-
-            .download-btn {
-                font-size: 18px;
-                padding: 15px 30px;
-            }
-        }
     </style>
 </head>
 <body>
@@ -340,7 +221,7 @@
 
     <!-- Header Section -->
     <header id="home">
-        <h1 style="color:yellow;">Shree-AI Personal Assistant</h1>
+        <h1>Shree-AI Personal Assistant</h1>
         <p>Enhance Your Productivity with Intelligent AI Assistance</p>
     </header>
 
@@ -353,7 +234,8 @@
         <h2>About Shree-AI</h2>
         <p>Shree-AI is a robust, open-source personal assistant built with the latest AI models like GPT-4 and GPT-4 Vision. With the ability to understand natural language, analyze images, and perform tasks based on user inputs, it's the ideal tool to boost your productivity. Although still in development and facing some limitations due to the lack of GPU resources, we're actively working on improving the system, especially with the **LOEON.Ai** beta model, which will offer even more advanced capabilities, including internet access.</p>
     </div>
- <!-- Content Section -->
+
+    <!-- Card Section -->
     <div class="card-container">
         <!-- Shree-AI Card -->
         <div class="card">
@@ -373,6 +255,7 @@
             <p>The **LOEON.Ai** beta model is being developed, which will offer additional capabilities like internet access, better task execution, and enhanced AI features for real-time problem-solving.</p>
         </div>
     </div>
+
     <!-- Features Section -->
     <section class="content-section" id="features">
         <h2>Features of Shree-AI</h2>
