@@ -150,12 +150,8 @@
 
         /* Animations */
         @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
 
         @keyframes fadeInUp {
@@ -199,6 +195,37 @@
             background: radial-gradient(circle, rgba(255, 51, 102, 0.2), rgba(0, 0, 0, 0.5));
             z-index: -1;
         }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 40px;
+            }
+            
+            header p {
+                font-size: 18px;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: center;
+                padding: 5px;
+            }
+
+            nav a {
+                margin: 5px 0;
+                font-size: 16px;
+            }
+
+            .feature {
+                margin: 10px;
+            }
+
+            .download-btn {
+                font-size: 18px;
+                padding: 15px 30px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -223,7 +250,7 @@
     <!-- About Section -->
     <div class="content-section" id="about">
         <h2>About Shree-AI</h2>
-        <p>Shree-AI is a robust, open-source personal assistant built with the latest AI models like GPT-4 and GPT-4 Vision. With the ability to understand natural language, analyze images, and perform tasks based on user inputs, it’s the ideal tool to boost your productivity. Although still in development and facing some limitations due to the lack of GPU resources, we’re actively working on improving the system, especially with the **LOEON.Ai** beta model, which will offer even more advanced capabilities, including internet access.</p>
+        <p>Shree-AI is a robust, open-source personal assistant built with the latest AI models like GPT-4 and GPT-4 Vision. With the ability to understand natural language, analyze images, and perform tasks based on user inputs, it's the ideal tool to boost your productivity. Although still in development and facing some limitations due to the lack of GPU resources, we're actively working on improving the system, especially with the **LOEON.Ai** beta model, which will offer even more advanced capabilities, including internet access.</p>
     </div>
 
     <!-- Features Section -->
@@ -232,7 +259,7 @@
         <div class="features">
             <div class="feature">
                 <h3>Chat Mode</h3>
-                <p>Engage in dynamic conversations with Shree-AI. Whether you’re tackling complex queries or brainstorming ideas, Shree-AI offers instant, meaningful responses tailored to your needs.</p>
+                <p>Engage in dynamic conversations with Shree-AI. Whether you're tackling complex queries or brainstorming ideas, Shree-AI offers instant, meaningful responses tailored to your needs.</p>
             </div>
             <div class="feature">
                 <h3>Vision Mode</h3>
@@ -240,7 +267,7 @@
             </div>
             <div class="feature">
                 <h3>Speech Synthesis</h3>
-                <p>Convert text to lifelike speech with support for Azure, Google, and OpenAI’s speech synthesis models. Enjoy a seamless voice interface for better interaction with Shree-AI.</p>
+                <p>Convert text to lifelike speech with support for Azure, Google, and OpenAI's speech synthesis models. Enjoy a seamless voice interface for better interaction with Shree-AI.</p>
             </div>
             <div class="feature">
                 <h3>File Interaction</h3>
@@ -252,7 +279,7 @@
             </div>
             <div class="feature">
                 <h3>Custom Commands</h3>
-                <p>Create custom commands to automate your daily tasks. Whether it’s running a Python script, controlling your system, or managing files, Shree-AI adapts to your workflow.</p>
+                <p>Create custom commands to automate your daily tasks. Whether it's running a Python script, controlling your system, or managing files, Shree-AI adapts to your workflow.</p>
             </div>
         </div>
 
