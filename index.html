@@ -14,76 +14,159 @@
             padding: 0;
             background-color: #111;
             color: white;
+            overflow-x: hidden;
         }
+
+        /* Header */
         header {
-            background-color: #1a1a1a;
-            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 80px 20px;
             text-align: center;
-            border-bottom: 2px solid #444;
+            animation: fadeIn 1s ease-in-out;
+            position: relative;
         }
+        
         header h1 {
-            font-size: 36px;
+            font-size: 48px;
             font-weight: bold;
+            margin-bottom: 10px;
         }
+
+        header p {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Download Button */
         .download-btn {
             display: inline-block;
-            background-color: #ff3333;
+            background: linear-gradient(135deg, #FF3366, #FF6666);
             color: white;
             font-size: 20px;
-            padding: 15px 30px;
+            padding: 20px 40px;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 50px;
             text-align: center;
-            margin-top: 20px;
-            transition: background-color 0.3s;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-top: 40px;
         }
+
         .download-btn:hover {
-            background-color: #ff1a1a;
+            transform: scale(1.1);
+            box-shadow: 0 10px 20px rgba(255, 51, 102, 0.5);
         }
+
+        /* Features Section */
         section {
-            padding: 40px 20px;
+            padding: 50px 20px;
+            background: url('your-image-path.gif') no-repeat center center;
+            background-size: cover;
+            animation: slideIn 1.5s ease-in-out;
             text-align: center;
         }
+
+        section h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
         .features {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
         }
+
         .feature {
-            background-color: #222;
+            background-color: rgba(0, 0, 0, 0.7);
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
+        .feature:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+        }
+
         .feature h3 {
             font-size: 24px;
             margin-bottom: 10px;
         }
-        footer {
-            background-color: #1a1a1a;
+
+        .feature p {
+            font-size: 18px;
             color: #bbb;
-            padding: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111;
+            color: #bbb;
+            padding: 40px;
             text-align: center;
+            border-top: 2px solid #444;
         }
+
+        footer p {
+            font-size: 18px;
+        }
+
         footer a {
-            color: #ff3333;
+            color: #FF3366;
             text-decoration: none;
+            transition: color 0.3s ease;
         }
+
         footer a:hover {
-            text-decoration: underline;
+            color: white;
+        }
+
+        /* Animation Effects */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Header Section -->
     <header>
         <h1>Shree-AI Personal Assistant</h1>
-        <p>Open-Source, Personal Desktop AI Assistant for Linux, Windows, and Mac.</p>
+        <p>Your very own AI assistant for Linux, Windows, and Mac, designed for a seamless experience.</p>
+        <a href="https://pygpt.net/download/2.4.46/pygpt-2.4.46.msi" class="download-btn">Download Shree-AI Personal AI</a>
     </header>
 
+    <!-- Features Section -->
     <section>
-        <h2>Features of Shree-AI</h2>
+        <h2>Key Features</h2>
         <div class="features">
             <div class="feature">
                 <h3>Chat Mode</h3>
@@ -110,10 +193,9 @@
                 <p>Interact with Shree-AI experts in areas like quantum physics, coding, and more.</p>
             </div>
         </div>
-
-        <a href="https://pygpt.net/download/2.4.46/pygpt-2.4.46.msi" class="download-btn">Download Shree-AI Personal AI</a>
     </section>
 
+    <!-- Footer Section -->
     <footer>
         <p>Contact me at:</p>
         <p>Email: <a href="mailto:2021umt1791@mnit.ac.in">2021umt1791@mnit.ac.in</a></p>
